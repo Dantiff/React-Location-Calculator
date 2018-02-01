@@ -1,0 +1,92 @@
+
+
+/*---------------------------------------
+    AUTH SETTINGS
+-----------------------------------------*/
+
+.auth-container {
+    margin: 0 auto;
+    padding: 0 62px 62px 62px;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.auth-container a {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #d6c9c9;
+    margin-top: 0px;
+    margin-bottom: 0px !important;
+    letter-spacing: 0.5px;
+}
+
+.button-wrapper{
+    margin-top: 30px;
+}
+
+.positive-button {
+  height: 50px;
+  border-radius: 0px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 100;
+  color: #fff;
+  background: #66ff33;
+  padding: 6px 12px;
+  margin-bottom: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.reset-password {
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #bfb2b2;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    float: right;
+}
+
+.form-input-field {
+  width: 100% !important;
+}
+
+.form-input-field label, .form-input-field input{
+  color:  #d6c9c9 !important;
+  -webkit-text-fill-color: #d6c9c9 !important;
+  -o-text-fill-color: #d6c9c9 !important;
+  -moz-text-fill-color: #d6c9c9 !important;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent !important;
+    background-image: none;
+    color: inherit !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:active,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:active {
+    -webkit-transition-delay: 99999s;
+    -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+}

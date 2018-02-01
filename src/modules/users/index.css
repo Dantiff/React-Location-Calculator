@@ -1,0 +1,193 @@
+.column {
+  border: solid 1px #cdcdcd;
+  min-height: 100%;
+  padding: 0 !important;
+}
+.center-column {
+  border-right: none !important;
+}
+.last-column {
+  
+}
+.column-title-box {
+  height: 60px;
+  border-bottom: solid 1px #cdcdcd;
+}
+.column-title {
+  padding: 23px 0 23px 22px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  color: #5f5f5f;
+  text-transform: uppercase;
+}
+.user-tab {
+  font-family: Roboto !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px !important;
+  text-align: center!important;
+  color: #5f5f5f !important;
+  text-transform: capitalize !important;
+}
+/*---------------------------------------
+    USERS LIST
+-----------------------------------------*/
+.vertical-icons {
+    background-color: #ffffff !important;
+    text-shadow: none !important;
+    color:#fff !important;
+    padding:10px 10px 0 10px;
+}
+
+.icons li {
+    background: none repeat scroll 0 0 #000;
+    height: 3px;
+    width: 3px;
+    line-height: 0;
+    list-style: none outside none;
+    margin-right: 15px;
+    margin-top: 3px;
+    vertical-align: top;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.users-count-tab {
+    padding-left: 0.5em !important;
+}
+
+.users-count {
+    font-size: 1.4em;
+    font-weight: 800;
+    padding-top: 1.5em;
+}
+
+.search-users {
+    width: 100%;    
+}
+
+.add-users {    
+    padding: 2em 3em 0.5em 0;
+}
+
+.search-input-field {
+  width: 100% !important;
+}
+
+.search-input-field label {
+    font-weight: 100 !important;
+    color:  #888181  !important;
+    -webkit-text-fill-color: #888181  !important;
+    -o-text-fill-color: #888181  !important;
+    -moz-text-fill-color: #888181  !important;
+}
+
+.search-input-field input {
+    font-weight: 100 !important;
+    color:  #4d4d4d  !important;
+    -webkit-text-fill-color: #4d4d4d  !important;
+    -o-text-fill-color: #4d4d4d  !important;
+    -moz-text-fill-color: #4d4d4d  !important;
+}
+
+/*---------------------------------------
+    CREATE ACCOUNT
+-----------------------------------------*/
+
+.create-account {
+    color: #000;
+}
+
+.create-account .header-title {    
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #58585B;
+    margin-top: 15px;
+    margin-bottom: 15px !important;
+    letter-spacing: 0.5px;
+}
+
+.create-account .instructions-message {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    line-height: 22px;
+}
+
+.create-account .primary-button {
+    height: 50px;
+    width: 50%;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 100;
+    color: #fff;
+    background: #4990E2;
+    padding: 6px 12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.permissions-box {
+    padding: 2em 0 1em 0;
+}
+
+.permissions-box label {
+    margin-bottom: 0 !important;    
+    line-height: 24px;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.flexed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.permissions-checkbox {
+}
+
+
+/*---------------------------------------
+    UPDATE USER
+-----------------------------------------*/
+
+.modal-actions {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    padding: 8px;
+    width: 100%;
+    text-align: right;
+    margin-top: 0px;
+}
+
+.form-errors {
+    font-size: 11px;
+    color: red;
+}
+
+
+
