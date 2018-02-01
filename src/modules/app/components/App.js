@@ -25,11 +25,11 @@ class App extends Component {
 
   render() {
 
-    const { isLoggedIn, userLoader, sessionLoader, clientLoader } = this.props;
+    const { isLoggedIn, userLoader } = this.props;
 
     let loader_div = null;
 
-    if(userLoader || sessionLoader || clientLoader){
+    if(userLoader){
       loader_div = <span>
                     <div className="load-container"> </div>
                     <div className="loader"> 
@@ -100,10 +100,8 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state){
   return {
-    isLoggedIn: !! state.sessions.auth_token,
-    sessionLoader: state.sessions.loader,
+    isLoggedIn: true,
     userLoader: state.users.loader,
-    clientLoader: state.clients.loader
   }
 }
 

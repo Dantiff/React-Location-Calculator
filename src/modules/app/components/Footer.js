@@ -7,19 +7,11 @@ class Footer extends Component{
  
  render () {
   
-  const { isLoggedIn } = this.props;
-  
-  var current_time = new moment ().format("YYYY");
+  const current_time = new moment ().format("YYYY");
 
-  if (isLoggedIn) {
-    var footerStyles = {
-      color: '#000000',
-      padding: '1em 0 2em 0'
-    }
-  } else {
-    footerStyles = {
-      color: '#ffffff'
-    }
+  const footerStyles = {
+    color: '#000000',
+    padding: '1em 0 2em 0'
   }
 
   return(
@@ -35,9 +27,7 @@ class Footer extends Component{
 }
 
 function mapStateToProps(state){
-  return {
-    isLoggedIn: !!state.sessions.auth_token
-  }
+  return {}
 }
 
 export default connect(mapStateToProps)(Footer);
