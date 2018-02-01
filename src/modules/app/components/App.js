@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as sessionActions from '../../auth/actions';
 import store from '../../../store/configureStore';
 import {persistStore} from 'redux-persist';
-import logo from '../../../images/background.png';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import ReduxToastr from 'react-redux-toastr';
 import Footer from './Footer';
 import Layout from './Layout';
 import CircularProgress from 'material-ui/CircularProgress';
@@ -25,7 +22,7 @@ class App extends Component {
 
   render() {
 
-    const { isLoggedIn, userLoader } = this.props;
+    const { userLoader } = this.props;
 
     let loader_div = null;
 
@@ -42,39 +39,18 @@ class App extends Component {
       return <div>Loading...</div>
     }
     else{
-
-      if(isLoggedIn){
-
-        var styles={
-          width: '100%',
-          height: '100vh',
-          background: '#ffffff',
-          backgroundSize: 'cover',
-          color: '#f3f3f3'
-        }
-      }else{
-
-        styles={
-          width: '100%',
-          height: '100vh',
-          background: 'url('+ logo + ') no-repeat right',
-          backgroundSize: 'cover',
-          color: '#ffffff'
-        }
-      };
+      const styles={
+        width: '100%',
+        height: '100vh',
+        background: '#ffffff',
+        backgroundSize: 'cover',
+        color: '#f3f3f3'
+      }
+    };
       return (
         <MuiThemeProvider>
           <div className="background" style={styles}>
               <div className="">
-
-                <ReduxToastr
-                  timeOut={6000}
-                  newestOnTop={false}
-                  preventDuplicates
-                  position="top-right"
-                  transitionIn="fadeIn"
-                  transitionOut="fadeOut"
-                  progressBar/>
 
                   <Layout>
                       {this.props.children}
@@ -100,7 +76,6 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state){
   return {
-    isLoggedIn: true,
     userLoader: state.users.loader,
   }
 }
