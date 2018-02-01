@@ -2,7 +2,7 @@
   "root": "build/",
   "proxies": {
     "/api/": {
-      "origin": "https://samaritan-api.mwaloni.com/api/"
+      "origin": "https://dry-harbor-88607.herokuapp.com/api/"
     }
   }
 }

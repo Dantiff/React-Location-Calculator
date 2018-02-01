@@ -2,8 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://samaritan-api.mwaloni.com/",
-  "homepage": "https://samaritan-api.mwaloni.com/",
+  "proxy": "https://dry-harbor-88607.herokuapp.com/",
+  "homepage": "https://dry-harbor-88607.herokuapp.com/",
   "devDependencies": {
     "react-router": "^3.0.2",
     "react-scripts": "^1.0.7",
