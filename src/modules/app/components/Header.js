@@ -1,8 +1,4 @@
-import { history } from '../../../store/configureStore';
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-
 
 class Header extends Component {
   render() {
@@ -16,9 +12,4 @@ class Header extends Component {
   }
 }
 
-
-function mapStateToProps(state){
-  return {}
-}
-
-export default connect(mapStateToProps)(Header);
+export default Header;

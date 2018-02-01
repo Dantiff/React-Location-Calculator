@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react';
 import moment from 'moment';
-import {connect} from 'react-redux';
 
 class Footer extends Component{
  
@@ -26,8 +25,4 @@ class Footer extends Component{
  }
 }
 
-function mapStateToProps(state){
-  return {}
-}
-
-export default connect(mapStateToProps)(Footer);
+export default Footer;

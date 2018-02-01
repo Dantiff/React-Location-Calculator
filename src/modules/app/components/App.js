@@ -52,9 +52,10 @@ class App extends Component {
           <div className="background" style={styles}>
               <div className="">
 
-                  <Layout>
-                      {this.props.children}
-                  </Layout>
+                  <Header/>
+                  <div className="clearfix"></div>
+                  
+                  {this.props.children}
 
                   { loader_div }
                   <div className="clearfix"></div>
