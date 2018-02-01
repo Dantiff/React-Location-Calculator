@@ -3,8 +3,6 @@ import initialState from '../../store/initialState';
 
 export default function UsersReducer(state = initialState.users, action) {
 
-  var dialogs = {}; 
-
   switch(action.type) {
     case types.FETCHING:
       return Object.assign({}, state, { 
