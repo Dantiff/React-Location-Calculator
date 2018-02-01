@@ -10,14 +10,15 @@ class Footer extends Component{
 
   const footerStyles = {
     color: '#000000',
-    padding: '1em 0 2em 0'
+    padding: '1em 0 2em 0',
+    textAlign: 'center',
   }
 
   return(
     <footer className="container footer" >
       <nav className="row">
         <p className="nav footer-text" style={footerStyles}> 
-          @ {current_time} Umati Capital. All rights reserved
+          @ {current_time} Touch Inspiration LLC. All rights reserved
         </p>
       </nav>
     </footer>

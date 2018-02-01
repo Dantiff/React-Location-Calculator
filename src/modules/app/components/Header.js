@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <div className="navbar">
         <div className="nav-brand brand">
-          <div className="logo-text"> <img  alt="Developer Test"/> </div>
+          <div className="brand-text"> Frontend Developer Test </div>
         </div>
       </div>
     );

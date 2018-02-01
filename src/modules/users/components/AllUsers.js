@@ -3,7 +3,6 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as UserActions from '../actions';
 import FlatButton from 'material-ui/FlatButton';
-import {Tabs, Tab} from 'material-ui/Tabs';
 import { Table } from 'reactstrap';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
@@ -18,50 +17,40 @@ class AllUsers extends Component{
 			userTabSlideIndex: 0,
 		};
 	}
+  //Search html tables using javascript
+  handleSearch(event) {
+    
+    var input, filter, table, tr, td, i;
+
+    input  = event.target.value;
+
+    this.setState({filterBy: input});
+
+    filter = input.toUpperCase();
+    table = document.getElementById("userTable");
+    tr = table.getElementsByTagName("tr");
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].innerHTML;
+      if (td) {
+        if (td.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  }
 
 	render(){
 		const { usersList } = this.props;
 
-    const styles = {
-    	origin: {
-    		borderBottom: 'solid 1px #cdcdcd',
-    	},
-      slide: {
-        padding: 10,
-      },
-      inkBar: {
-        height: 3,
-  			backgroundColor: '#5f5f5f',
-      },
-      tabItem: {
-        background: 'transparent',
-        color: '#5f5f5f',
-        width: '50%',
-      }
-    };
-
 		return(
 			<div>
-				<div className="column center-column col-sm-4 col-md-4">
+				<div className="column last-column col-sm-offset-2 col-sm-8">
 					<div className="column-title-box">
 						<p className="column-title"> User Management </p> 
-					</div>
-
-	        <Tabs
-	          onChange={() => console.log(this.state.userTabSlideIndex)}
-	          value={this.state.userTabSlideIndex}
-            inkBarStyle={ styles.inkBar }
-            tabItemContainerStyle={ styles.tabItem }
-            style={ styles.origin }
-	        >
-	          <Tab  className="user-tab" label="Add" value={ 0 } />
-	          <Tab className="user-tab" label="View" value={ 1 } />
-	        </Tabs>
-					
-				</div>
-				<div className="column last-column col-sm-8 col-md-8">
-					<div className="column-title-box">
-						<p className="column-title"> Registered Users </p> 
 					</div>
 					<div className="col-xs-12"> 
 							<div className="col-sm-7 col-md-7 float-left users-count-tab"> 
@@ -79,7 +68,7 @@ class AllUsers extends Component{
 												floatingLabelText="Search..."
 												name="filterBy"
 												value={this.state.filterBy}
-												onChange={() => console.log(this.state.filterBy)}
+												onChange={this.handleSearch.bind(this)}
 												className="search-input-field"
 											/>
 										</ValidatorForm>
@@ -103,20 +92,18 @@ class AllUsers extends Component{
 									<th>Email</th>
 									<th>Phone</th>
 									<th>Role</th>
-									<th>Status</th>
 									<th> </th>
 								</tr>
 							</thead>
 							<tbody id="userTable">
-								{usersList.map((user) => {
+								{usersList.map((user, i) => {
 
 									return(
-										<tr>
-											<td className="capitalize">{user.attributes.name}</td>
+										<tr key={i}>
+											<td className="capitalize">{user.attributes.first_name + ' ' + user.attributes.last_name}</td>
 											<td>{user.attributes.email}</td>
 											<td>{user.attributes.mobile_number}</td>
 											<td>{user.attributes.role}</td>
-											<td className="capitalize">{user.attributes.status}</td>
 											<td> Edit </td>
 										</tr>
 									)}

@@ -31,29 +31,9 @@
 /*---------------------------------------
     USERS LIST
 -----------------------------------------*/
-
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+.table {
+    color: #000000;
 }
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
-.users-count-tab {
-    padding-left: 0.5em !important;
-}
-
-.users-count {
-    font-size: 1.4em;
-    font-weight: 800;
-    padding-top: 1.5em;
-}
-
 .search-users {
     width: 100%;    
 }
