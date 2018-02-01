@@ -13,15 +13,12 @@ import { Table } from 'reactstrap';
 import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 import CreateUserContent from './CreateUserContent';
 import UpdateUserContent from './UpdateUserContent';
-import RequestSuspendUserContent from './RequestSuspendUserContent';
-import CheckUserContent from './CheckUserContent';
-import ConfirmSuspendUserContent from './ConfirmSuspendUserContent';
 
 
 class AllUsers extends Component{
 	constructor(props){
 		super();
-		props.user_actions.getUsers();
+		props.userActions.getUsers();
 
 		this.state = { 
 			filterBy: '', 
@@ -34,9 +31,9 @@ class AllUsers extends Component{
 	}
 
 	componentWillMount() {
-		this.props.user_actions.getUserPermissions(JSON.parse(localStorage.getItem("auth_user")));
+		this.props.userActions.getUserPermissions(JSON.parse(localStorage.getItem("auth_user")));
 
-		this.props.user_actions.getAllPermissions();
+		this.props.userActions.getAllPermissions();
 	}
 
 	getAllowedActions(user) {
@@ -85,7 +82,7 @@ class AllUsers extends Component{
 
 		this.setState({open: false});
 
-		this.props.user_actions.requestUpdateUser(event);
+		this.props.userActions.requestUpdateUser(event);
 	}
 
   handleChangeUserTab = (value) => {
@@ -264,7 +261,7 @@ class AllUsers extends Component{
 
 function mapDispatchToProps(dispatch) {
 	return {
-		user_actions: bindActionCreators(UserActions, dispatch),
+		userActions: bindActionCreators(UserActions, dispatch),
 	};
 }
 
