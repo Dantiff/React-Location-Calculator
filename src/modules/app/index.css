@@ -1,0 +1,17 @@
+
+/*---------------------------------------
+    CONTENT
+-----------------------------------------*/
+.app-content {
+  color: #000000;
+  background-color: #fafafa;
+  padding: 0 !important;
+}
+.brand-text {
+  color: black;
+  font-weight: 800;
+  font-size: 2em;
+  width: 100vw;
+  text-align: center;
+}
+

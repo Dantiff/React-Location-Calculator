@@ -1,0 +1,63 @@
+.column {
+  border: solid 1px #cdcdcd;
+  min-height: 100%;
+  padding: 0 !important;
+}
+.center-column {
+  border-right: none !important;
+}
+.column-title-box {
+  height: 60px;
+  border-bottom: solid 1px #cdcdcd;
+}
+.column-title {
+  padding: 23px 0 23px 22px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  color: #5f5f5f;
+  text-transform: uppercase;
+}
+.user-tab {
+  font-family: Roboto !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.4px !important;
+  text-align: center!important;
+  color: #5f5f5f !important;
+  text-transform: capitalize !important;
+}
+/*---------------------------------------
+    USERS LIST
+-----------------------------------------*/
+.table {
+    color: #000000;
+}
+.search-users {
+    width: 100%;    
+}
+
+.add-users {    
+    padding: 2em 3em 0.5em 0;
+}
+
+.search-input-field {
+  width: 100% !important;
+}
+
+.search-input-field label {
+    font-weight: 100 !important;
+    color:  #888181  !important;
+    -webkit-text-fill-color: #888181  !important;
+    -o-text-fill-color: #888181  !important;
+    -moz-text-fill-color: #888181  !important;
+}
+
+.search-input-field input {
+    font-weight: 100 !important;
+    color:  #4d4d4d  !important;
+    -webkit-text-fill-color: #4d4d4d  !important;
+    -o-text-fill-color: #4d4d4d  !important;
+    -moz-text-fill-color: #4d4d4d  !important;
+}

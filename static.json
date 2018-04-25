@@ -1,0 +1,8 @@
+{
+  "root": "build/",
+  "proxies": {
+    "/api/": {
+      "origin": "https://dry-harbor-88607.herokuapp.com/api/"
+    }
+  }
+}
