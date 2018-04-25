@@ -2,7 +2,7 @@
   "root": "build/",
   "proxies": {
     "/api/": {
-      "origin": "https://technekes.mockable.io/ngc-calculator-api/calculations/"
+      "origin": "https://technekes.mockable.io/"
     }
   }
 }

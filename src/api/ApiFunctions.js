@@ -1,4 +1,3 @@
-// import store from '../store/configureStore'
 
 export function apiWrapper(method, url, params={}){
   let request = '';
@@ -6,7 +5,7 @@ export function apiWrapper(method, url, params={}){
   let headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
-    // 'Authorization': store.getState()['sessions']['auth_token']
+    'Authorization': '',
   }
   if(method === 'GET'){
     request = new Request(url, {
