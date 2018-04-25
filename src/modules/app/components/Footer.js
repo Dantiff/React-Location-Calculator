@@ -18,7 +18,7 @@ class Footer extends Component{
     <footer className="container footer" >
       <nav className="row">
         <p className="nav footer-text" style={footerStyles}> 
-          @ {current_time} Touch Inspiration LLC. All rights reserved
+          @ {current_time} Daniel Mburu. All rights reserved
         </p>
       </nav>
     </footer>

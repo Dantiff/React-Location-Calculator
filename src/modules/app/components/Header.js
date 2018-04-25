@@ -5,7 +5,9 @@ class Header extends Component {
     return (
       <div className="navbar">
         <div className="nav-brand brand">
-          <div className="brand-text"> Frontend Developer Test </div>
+          <div className="brand-text">
+          	<img src="/static/img/c-header.png" alt="React Location Calculator" />
+          </div>
         </div>
       </div>
     );
