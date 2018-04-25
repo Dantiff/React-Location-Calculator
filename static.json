@@ -2,7 +2,7 @@
   "root": "build/",
   "proxies": {
     "/api/": {
-      "origin": "https://dry-harbor-88607.herokuapp.com/api/"
+      "origin": "https://technekes.mockable.io/ngc-calculator-api/calculations/"
     }
   }
 }
