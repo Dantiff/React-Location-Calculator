@@ -2,8 +2,8 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://dry-harbor-88607.herokuapp.com/",
-  "homepage": "https://dry-harbor-88607.herokuapp.com/",
+  "proxy": "https://technekes.mockable.io/ngc-calculator-api/calculations",
+  "homepage": "https://technekes.mockable.io/ngc-calculator-api/calculations",
   "devDependencies": {
     "react-router": "^3.0.2",
     "react-scripts": "^1.0.7",
@@ -15,7 +15,6 @@
     "material-ui": "^0.18.3",
     "moment": "^2.18.1",
     "react": "^15.5.4",
-    "react-avatar": "^2.3.0",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.5.4",
     "react-fontawesome": "^1.6.1",
