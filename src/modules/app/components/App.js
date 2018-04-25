@@ -9,10 +9,10 @@ class App extends Component {
 
   render() {
 
-    const { userLoader } = this.props;
+    const { calculatorLoader } = this.props;
     let loader_div = null;
 
-    if(userLoader){
+    if(calculatorLoader){
       loader_div = <span>
                     <div className="load-container"> </div>
                     <div className="loader"> 
@@ -51,7 +51,7 @@ class App extends Component {
 
 function mapStateToProps(state){
   return {
-    userLoader: state.users.loader,
+    calculatorLoader: state.calculator.loader,
   }
 }
 

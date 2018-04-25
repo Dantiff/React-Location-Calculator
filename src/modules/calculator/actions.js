@@ -1,16 +1,13 @@
 
-import usersApi from '../.././api/usersApi';
+import Api from '../.././api/calculator';
 import * as action from './actionCreators';
 
-export function getUsers() {
+export function calculateLocation(payload) {
 	return function(dispatch) {
-
-		return usersApi.getUsers().then(response => {
-
-			dispatch(action.getUsersSuccess(response.data));
+		return Api.calculateLocation(payload).then(response => {
+			dispatch(action.calculateLocationSuccess(response.GoldBondCalculation));
 
 		}).catch(error => {
-
 			dispatch(action.dispatchGeneralError(error));
 		});
 	};

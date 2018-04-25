@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux'
-import users from '../modules/users/reducer';
+import calculator from '../modules/calculator/reducer';
 
 const rootReducer = combineReducers({
   // short hand property names
-  users,
+  calculator,
   routing,
 })
 

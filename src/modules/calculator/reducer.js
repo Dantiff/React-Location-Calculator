@@ -1,7 +1,7 @@
 import * as types from '../../store/actionTypes';
 import initialState from '../../store/initialState';
 
-export default function UsersReducer(state = initialState.users, action) {
+export default function CalculatorReducer(state = initialState.calculator, action) {
 
   switch(action.type) {
     case types.FETCHING:
@@ -12,9 +12,9 @@ export default function UsersReducer(state = initialState.users, action) {
       return Object.assign({}, state, { 
         loader: false,
       })
-    case types.GET_USERS_SUCCESS:
+    case types.CALCULATE_LOCATION_SUCCESS:
       return Object.assign({}, state, { 
-        list: action.users
+        locationData: action.data
       })
     case types.GENERAL_ERROR:
       return Object.assign({}, state, { 

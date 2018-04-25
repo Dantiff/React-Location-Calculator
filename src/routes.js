@@ -4,13 +4,13 @@ import { Route, IndexRoute } from 'react-router';
 //App Entry/Control
 import App from './modules/app/components/App';
 
-//Users
-import AllUsers from './modules/users/components/AllUsers';
+//Location Calculator
+import LocationCalculator from './modules/calculator/components/index';
 
 
 export default ( 
-  <Route path="/" component={App}>
-    <IndexRoute component={AllUsers}/>
-   	<Route path="users" component={AllUsers}/>
+  <Route path="/" component={ App }>
+    <IndexRoute component={ LocationCalculator }/>
+   	<Route path="users" component={ LocationCalculator }/>
   </Route>
 );

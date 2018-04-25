@@ -13,10 +13,10 @@ export function fetchComplete (response){
   }
 }
 
-export function getUsersSuccess(users) {
+export function calculateLocationSuccess(data) {
   return {
-     type: types.GET_USERS_SUCCESS,
-     users: users
+     type: types.CALCULATE_LOCATION_SUCCESS,
+     data: data
   }
 }
 

@@ -1,8 +1,7 @@
 
 export default {
-  sessions:{},
-  users: {
+  calculator: {
     loader: false,
-    list: [],
+    locationData: {},
   },
 }
