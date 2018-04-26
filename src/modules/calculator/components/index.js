@@ -13,35 +13,104 @@ class LocationCalculator extends Component{
 		props.cActions.calculateLocation();
 
 		this.state = { 
-			filterBy: '', 
-			userTabSlideIndex: 0,
+			calculator_type: 'gold_bond', 
+			union: true,
+			location: '',
+			square_footage: '',
 		};
+		this.handleChange = this.handleChange.bind(this);
 	}
-  //Search html tables using javascript
-  handleSearch(event) {
-    
-    var input, filter, table, tr, td, i;
-
-    input  = event.target.value;
-
-    this.setState({filterBy: input});
-
-    filter = input.toUpperCase();
-    table = document.getElementById("userTable");
-    tr = table.getElementsByTagName("tr");
-
-    // Loop through all table rows, and hide those who don't match the search query
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].innerHTML;
-      if (td) {
-        if (td.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }
-    }
+  handleChange(event) {
+  	if (!isNaN(event.target.value)) {
+	    this.setState({
+	      [event.target.name]: event.target.value
+	    });
+	  }
   }
+  handleCalculate() {
+  	console.log('The submit data', { ...this.state, union: this.refs.unionCheck.checked });
+  	this.props.cActions.calculateLocation({ ...this.state, union: this.refs.unionCheck.checked });
+  }
+  getGridDataBox(data, index) {
+  	return (
+			<div className="col-xs-12 col-sm-6 pa-0 grid-data">
+				<div className="grid-data-box">
+					<div className="data-title">
+						Screws
+					</div>
+				  <div className="data-table">
+			      <Table>
+			      	<div className="row-title-one"> NGC GRidMax </div>
+			      	<div className="row-title-two"> COMPETITOR </div>
+			        <thead>
+			          <tr>
+			            <th>Labour Cost/SF</th>
+			            <th>Ext. Labour Cost</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr>
+			            <td>$0.235</td>
+			            <td>$0.214</td>
+			          </tr>
+			          <tr>
+			            <td>$1.25</td>
+			            <td>$5.28</td>
+			          </tr>
+			        </tbody>
+			      </Table>
+				  </div>
+					<div className="data-footer">
+						<p className="grid-detail ma-0">
+							Overall labour savings (% / cost)
+						</p>
+						<div className="d-flex">
+							<div className="grid-savings">
+								<p className="amount"> 84.6% </p> 
+							</div>
+							<div className="grid-savings"> 
+								<p className="amount"> 25.5% </p> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		);
+  }
+  getGrid(data, grid, num) {
+  	return (
+			<div className={ 'row location-row location-grid pa-0 ' + (num === 1 ? 'theme-red' : 'theme-gold')}>
+				<div className="col-xs-12 pa-0">
+					<div className="grid-title">
+						<p className=""> Comparison #{num}: GridMarX (12/12) vs Leading Competitor (8/12)</p> 
+					</div>
+				</div>
+				<div className="col-xs-12 pa-0">
+					<div className="grid-detail">
+						<p className=""> Overall Material and Labour Savings { grid } </p> 
+					</div>
+				</div>
+				<div className="col-xs-6 pa-0">
+					<div className="grid-savings">
+						<p className="save"> Cost Savings </p> 
+						<p className="amount"> 84.6% </p> 
+					</div>
+				</div>
+				<div className="col-xs-6 pa-0">
+					<div className="grid-savings">
+						<p className="save"> % Savings </p> 
+						<p className="amount"> 25.5% </p> 
+					</div>
+				</div>
+
+				{ this.getGridDataBox() }
+				{ this.getGridDataBox() }
+				{ this.getGridDataBox() }
+				{ this.getGridDataBox() }
+
+			</div>
+		);
+}
 
 	render(){
 		const { locationData } = this.props;
@@ -55,14 +124,30 @@ class LocationCalculator extends Component{
 							<div className="input-title">
 								<p className=""> Labor Type </p> 
 							</div>
-							<input type="checkbox" checked data-toggle="toggle" data-on="Union" data-off="Non-Union" data-style="ios" data-size="large"/>
+							<input 
+								type="checkbox" 
+								data-toggle="toggle" 
+								data-on="Union" 
+								data-off="Non-Union" 
+								data-style="ios" 
+								data-size="large"
+								ref="unionCheck"
+								checked={this.state.union}
+							/>
 						</div>
 						<div className="col-xs-12 col-sm-3">
 							<div className="input-title">
 								<p className=""> Zip Code (First 3 Digits): </p> 
 							</div>
 							<div className="input-group input-group-lg">
-							  <input type="text" className="form-control" placeholder="" />
+							  <input 
+							  	type="text" 
+							  	name="location"
+							  	className="form-control" 
+							  	placeholder="" 
+							  	value={this.state.location}
+									onChange={this.handleChange}
+							  />
 							</div>
 						</div>
 						<div className="col-xs-12 col-sm-3">
@@ -70,13 +155,20 @@ class LocationCalculator extends Component{
 								<p className=""> Square Footage: </p> 
 							</div>
 							<div className="input-group input-group-lg">
-							  <input type="text" className="form-control" placeholder="" />
+							  <input 
+							  	type="text" 
+							  	className="form-control" 
+							  	placeholder="" 
+							  	name="square_footage"
+							  	value={this.state.square_footage}
+									onChange={this.handleChange}
+							  />
 							</div>
 						</div>
 						<div className="input-submit col-xs-12 col-sm-3">
 							<div className="btn-group btn-group-justified" role="group" aria-label="...">
   							<div className="btn-group" role="group">
-									<button type="button" className="btn btn-primary btn-lg"> Calculate </button>
+									<button type="button" className="btn btn-primary btn-lg" onClick={this.handleCalculate.bind(this)}> Calculate </button>
 								</div> 
 							</div>
 							<div className="input-text">
@@ -84,87 +176,10 @@ class LocationCalculator extends Component{
 							</div>
 						</div>
 					</div>
-					<div className={ 'row location-row location-grid pa-0 ' + 'theme-red'}>
-						<div className="col-xs-12 pa-0">
-							<div className="grid-title">
-								<p className=""> Comparison #1: GridMarX </p> 
-							</div>
-						</div>
-						<div className="col-xs-12 pa-0">
-							<div className="grid-detail">
-								<p className=""> Overall Material and Labour Savings </p> 
-							</div>
-						</div>
-						<div className="col-xs-6 pa-0">
-							<div className="grid-savings">
-								<p className="save"> Cost Savings </p> 
-								<p className="amount"> 84.6% </p> 
-							</div>
-						</div>
-						<div className="col-xs-6 pa-0">
-							<div className="grid-savings">
-								<p className="save"> % Savings </p> 
-								<p className="amount"> 25.5% </p> 
-							</div>
-						</div>
-						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
-							<div className="grid-data-box">
-								<div className="data-title">
-									Screws
-								</div>
-							  <div className="data-table">
-						      <Table>
-						      	<div className="row-title-one"> MyTitle2 </div>
-						      	<div className="row-title-two"> MyTitle </div>
-						        <thead>
-						          <tr>
-						            <th>Last Name</th>
-						            <th>Username</th>
-						          </tr>
-						        </thead>
-						        <tbody>
-						          <tr>
-						            <td>Thornton</td>
-						            <td>@fat</td>
-						          </tr>
-						          <tr>
-						            <td>Thornton</td>
-						            <td>@fat</td>
-						          </tr>
-						        </tbody>
-						      </Table>
-							  </div>
-								<div className="data-footer">
-									<p className="grid-detail ma-0">
-										Overall labour savings (% / cost)
-									</p>
-									<div className="d-flex">
-										<div className="grid-savings">
-											<p className="amount"> 84.6% </p> 
-										</div>
-										<div className="grid-savings"> 
-											<p className="amount"> 25.5% </p> 
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
-							<div className="grid-data-box">
-								<p className=""> Grid data box </p> 
-							</div>
-						</div>
-						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
-							<div className="grid-data-box">
-								<p className=""> Grid data box </p> 
-							</div>
-						</div>
-						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
-							<div className="grid-data-box">
-								<p className=""> Grid data box </p> 
-							</div>
-						</div>
-					</div>
+
+					{ this.getGrid(locationData.vertical, 'Vertical', 1) }
+					{ this.getGrid(locationData.horizontal, 'Horizontal', 2) }
+
 				</div>
 			</div>
 		);

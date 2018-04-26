@@ -17,10 +17,10 @@ $light-grey-bg: #eceded;
 }
 %vertical-text {
 	position: absolute;
-  margin-left: -30px;
+  margin-left: -40px;
   transform: rotate(270deg);
   transform-origin: left top 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /*---------------------------------------
@@ -84,6 +84,7 @@ $light-grey-bg: #eceded;
 	}
 	.location-grid {
 		@extend %card;
+		margin-bottom: 48px;
 		.grid-title {    
 			height: 50px;
 	    background-color: #e4e5e5;
@@ -118,6 +119,7 @@ $light-grey-bg: #eceded;
 	  }
 	}
 	.grid-data {
+		margin-bottom: 16px;
 		background-color: #f9fafa;
 		.grid-data-box {
 			@extend %card;
@@ -144,6 +146,7 @@ $light-grey-bg: #eceded;
 			    			border: none !important;
 			    			font-weight: 50;
 			    			text-align: center;
+			    			font-size: 16px;
 			    		}
 			    	}
 			    }
@@ -157,17 +160,18 @@ $light-grey-bg: #eceded;
 						    font-weight: bold;
 						    font-size: 26px;
 						    color: #000;
+						    opacity: .8;
 			    		}
 			    	}
 			    }
 				}
 				.row-title-one {
 					@extend %vertical-text;
-			    margin-top: 100px;
+			    margin-top: 110px;
 				}
 				.row-title-two {
 					@extend %vertical-text;
-			    margin-top: 215px;
+			    margin-top: 240px;
 				}
 			}
 		}
