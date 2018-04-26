@@ -36,7 +36,7 @@ class LocationCalculator extends Component{
 			<div className="col-xs-12 col-sm-6 pa-0 grid-data">
 				<div className="grid-data-box">
 					<div className="data-title">
-						Screws
+						{ data.title }
 					</div>
 				  <div className="data-table">
 			      <Table>
@@ -50,12 +50,12 @@ class LocationCalculator extends Component{
 			        </thead>
 			        <tbody>
 			          <tr>
-			            <td>$0.235</td>
-			            <td>$0.214</td>
+			            <td> { data.ngc1 } </td>
+			            <td> { data.ngc2 } </td>
 			          </tr>
 			          <tr>
-			            <td>$1.25</td>
-			            <td>$5.28</td>
+			            <td> { data.cmp1 } </td>
+			            <td> { data.cmp2 } </td>
 			          </tr>
 			        </tbody>
 			      </Table>
@@ -66,10 +66,10 @@ class LocationCalculator extends Component{
 						</p>
 						<div className="d-flex">
 							<div className="grid-savings">
-								<p className="amount"> 84.6% </p> 
+								<p className="amount"> { data.save1 } </p> 
 							</div>
 							<div className="grid-savings"> 
-								<p className="amount"> 25.5% </p> 
+								<p className="amount">  { data.cmp2 } </p> 
 							</div>
 						</div>
 					</div>
@@ -78,6 +78,9 @@ class LocationCalculator extends Component{
 		);
   }
   getGrid(data, grid, num) {
+  	if (!data) {
+  		return (<span></span>);
+  	}
   	return (
 			<div className={ 'row location-row location-grid pa-0 ' + (num === 1 ? 'theme-red' : 'theme-gold')}>
 				<div className="col-xs-12 pa-0">
@@ -103,10 +106,54 @@ class LocationCalculator extends Component{
 					</div>
 				</div>
 
-				{ this.getGridDataBox() }
-				{ this.getGridDataBox() }
-				{ this.getGridDataBox() }
-				{ this.getGridDataBox() }
+				{ 
+					this.getGridDataBox({
+						title: 'Labour',
+						ngc1: data.national_gypsum.labor_cost_per_square_foot,
+						ngc2: data.national_gypsum.extended_labor_cost,
+						cmp1: data.competitor.labor_cost_per_square_foot,
+						cmp2: data.competitor.extended_labor_cost,
+						phrase: 'labour',
+						save1: data.total_savings.labor_cost_per_square_foot_percentage,
+						save2: data.total_savings.extended_labor_cost,
+					})
+				}
+				{ 
+					this.getGridDataBox({
+						title: 'Screws',
+						ngc1: data.national_gypsum.average_total_screws,
+						ngc2: data.national_gypsum.extended_screw_cost,
+						cmp1: data.competitor.average_total_screws,
+						cmp2: data.competitor.extended_screw_cost,
+						phrase: 'labour',
+						save1: data.total_savings.average_total_screws_percentage,
+						save2: data.total_savings.extended_screw_cost,
+					})
+				}
+				{  
+					this.getGridDataBox({
+						title: 'Sports Fasteners Labour',
+						ngc1: data.national_gypsum.spot_fastener_labor_cost_per_square_foot,
+						ngc2: data.national_gypsum.spot_fastener_extended_labor_cost,
+						cmp1: data.competitor.spot_fastener_labor_cost_per_square_foot,
+						cmp2: data.competitor.spot_fastener_extended_labor_cost,
+						phrase: 'labour',
+						save1: data.total_savings.spot_fastener_labor_cost_per_square_foot_percentage,
+						save2: data.total_savings.spot_fastener_extended_labor_cost,
+					})
+				}
+				{  
+					this.getGridDataBox({
+						title: 'Sports Fasteners Material',
+						ngc1: data.national_gypsum.spot_fastener_material_cost_per_square_foot,
+						ngc2: data.national_gypsum.spot_fastener_extended_material_cost,
+						cmp1: data.competitor.spot_fastener_material_cost_per_square_foot,
+						cmp2: data.competitor.spot_fastener_extended_material_cost,
+						phrase: 'labour',
+						save1: data.total_savings.spot_fastener_material_cost_per_square_foot_percentage,
+						save2: data.total_savings.spot_fastener_extended_material_cost,
+					}) 
+				}
 
 			</div>
 		);
