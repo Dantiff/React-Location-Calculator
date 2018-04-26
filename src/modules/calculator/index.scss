@@ -1,5 +1,21 @@
 
 /*---------------------------------------
+    Calculator Variables
+-----------------------------------------*/
+$theme-red: #d94531;
+$theme-gold: #edcd2e;
+
+%card {
+	height: auto;
+	display: block;
+  border-radius: 2px;
+  min-width: 0;
+  position: relative;
+  text-decoration: none;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+/*---------------------------------------
     Calculator Index
 -----------------------------------------*/
 .calculator-index {
@@ -15,7 +31,7 @@
 	  height: auto;
 	  min-height: 20vh;
 	  .input-title {
-			padding: 24px 0 12px;
+			padding: 24px 0 4px;
 			font-size: 14px;
 			// letter-spacing: .5px;
 			font-weight: bold;
@@ -56,6 +72,54 @@
 				text-align: center;
 				padding-top: 16px;
 			}
+		}
+	}
+	.location-grid {
+		@extend %card;
+		.grid-title {    
+			height: 50px;
+	    background-color: #e4e5e5;
+	    padding: 16px 32px;
+	    color: #2a2a2a;
+	    font-weight: bold;
+	    font-size: 14px;
+	  }
+    letter-spacing: -.5px;
+	  .grid-detail {
+	  	padding: 16px 32px 2px;
+	    background-color: #eceded;
+	    color: #2a2a2a;
+	    font-size: 13px;
+	    font-weight: bold;
+	  }
+	  .grid-savings {
+		  background-color: #eceded;
+	    text-align: center;
+	    .save {
+		    font-size: 12px;
+		    letter-spacing: -0.5px;
+		    margin-bottom: 0;
+		  }
+		  .amount {
+		  	padding-bottom: 16px;
+		    margin-bottom: 0;
+		    font-weight: bold;
+		    font-size: 22px;
+		    color: #000;
+		  }
+	  }
+	}
+	.theme-red {
+		border-top: 10px solid $theme-red;
+	}
+	.theme-gold {
+		border-top: 10px solid $theme-gold;
+	}
+	.grid-data {
+		background-color: #f9fafa;
+		.grid-data-box {
+			@extend %card;
+			margin: 16px 16px 16px 24px;
 		}
 	}
 }

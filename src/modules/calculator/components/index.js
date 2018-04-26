@@ -55,7 +55,7 @@ class LocationCalculator extends Component{
 							<div className="input-title">
 								<p className=""> Labor Type </p> 
 							</div>
-							<input type="checkbox" checked data-toggle="toggle" data-on="Union" data-off="Non-Union" data-style="ios"/>
+							<input type="checkbox" checked data-toggle="toggle" data-on="Union" data-off="Non-Union" data-style="ios" data-size="large"/>
 						</div>
 						<div className="col-xs-12 col-sm-3">
 							<div className="input-title">
@@ -84,43 +84,50 @@ class LocationCalculator extends Component{
 							</div>
 						</div>
 					</div>
-					<div className="row location-row location-grid">
-						<div className="col-xs-12">
+					<div className={ 'row location-row location-grid pa-0 ' + 'theme-red'}>
+						<div className="col-xs-12 pa-0">
 							<div className="grid-title">
 								<p className=""> Comparison #1: GridMarX </p> 
 							</div>
 						</div>
-						<div className="col-xs-12">
+						<div className="col-xs-12 pa-0">
 							<div className="grid-detail">
 								<p className=""> Overall Material and Labour Savings </p> 
 							</div>
 						</div>
-						<div className="col-xs-6">
+						<div className="col-xs-6 pa-0">
 							<div className="grid-savings">
-								<p className=""> 25.25% </p> 
+								<p className="save"> Cost Savings </p> 
+								<p className="amount"> 84.6% </p> 
 							</div>
 						</div>
-						<div className="col-xs-6">
+						<div className="col-xs-6 pa-0">
 							<div className="grid-savings">
-								<p className=""> 25.5% </p> 
+								<p className="save"> % Savings </p> 
+								<p className="amount"> 25.5% </p> 
 							</div>
 						</div>
-						<div className="col-xs-12 col-sm-6">
+						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
+							<div className="grid-data-box">
+							  <img className="card-img-top" src="..." alt="Card image cap" />
+							  <div className="card-body">
+							    <h5 className="card-title">Card title</h5>
+							    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							    <a href="#" className="btn btn-primary">Go somewhere</a>
+							  </div> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
 							<div className="grid-data-box">
 								<p className=""> Grid data box </p> 
 							</div>
 						</div>
-						<div className="col-xs-12 col-sm-6">
+						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
 							<div className="grid-data-box">
 								<p className=""> Grid data box </p> 
 							</div>
 						</div>
-						<div className="col-xs-12 col-sm-6">
-							<div className="grid-data-box">
-								<p className=""> Grid data box </p> 
-							</div>
-						</div>
-						<div className="col-xs-12 col-sm-6">
+						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
 							<div className="grid-data-box">
 								<p className=""> Grid data box </p> 
 							</div>
