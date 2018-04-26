@@ -50,36 +50,70 @@ class LocationCalculator extends Component{
 
 		return(
 			<div className="calculator-index">
-				<div className="column last-column col-xs-12">
-					<div className="column-title-box">
-						<p className="column-title"> User Management </p> 
+				<div className="container container-fluid">
+					<div className="row location-row location-input">
+						<div className="col-xs-12 col-sm-3">
+							<div className="input-title">
+								<p className=""> Labor Type </p> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-3">
+							<div className="input-title">
+								<p className=""> Labor Type </p> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-3">
+							<div className="input-title">
+								<p className=""> Labor Type </p> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-3">
+							<div className="input-title">
+								<p className=""> Labor Type </p> 
+							</div>
+						</div>
 					</div>
-					<div className='col-xs-12'>
-						<Table striped id="">
-							<thead>
-								<tr>
-									<th>Full Name</th>
-									<th>Email</th>
-									<th>Phone</th>
-									<th>Role</th>
-									<th> </th>
-								</tr>
-							</thead>
-							<tbody id="userTable">
-								{usersList.map((user, i) => {
-
-									return(
-										<tr key={i}>
-											<td className="capitalize">{user.attributes.first_name + ' ' + user.attributes.last_name}</td>
-											<td>{user.attributes.email}</td>
-											<td>{user.attributes.mobile_number}</td>
-											<td>{user.attributes.role}</td>
-											<td> Edit </td>
-										</tr>
-									)}
-								)}
-							</tbody>
-						</Table>
+					<div className="row location-row location-grid">
+						<div className="col-xs-12">
+							<div className="grid-title">
+								<p className=""> Comparison #1: GridMarX </p> 
+							</div>
+						</div>
+						<div className="col-xs-12">
+							<div className="grid-detail">
+								<p className=""> Overall Material and Labour Savings </p> 
+							</div>
+						</div>
+						<div className="col-xs-6">
+							<div className="grid-savings">
+								<p className=""> 25.25% </p> 
+							</div>
+						</div>
+						<div className="col-xs-6">
+							<div className="grid-savings">
+								<p className=""> 25.5% </p> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-6">
+							<div className="grid-data-box">
+								<p className=""> Grid data box </p> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-6">
+							<div className="grid-data-box">
+								<p className=""> Grid data box </p> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-6">
+							<div className="grid-data-box">
+								<p className=""> Grid data box </p> 
+							</div>
+						</div>
+						<div className="col-xs-12 col-sm-6">
+							<div className="grid-data-box">
+								<p className=""> Grid data box </p> 
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
