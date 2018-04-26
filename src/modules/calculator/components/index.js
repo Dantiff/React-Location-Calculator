@@ -45,7 +45,6 @@ class LocationCalculator extends Component{
 
 	render(){
 		const { locationData } = this.props;
-		const usersList = [];
 		console.log('this is the retun Component data', locationData);
 
 		return(
@@ -59,17 +58,28 @@ class LocationCalculator extends Component{
 						</div>
 						<div className="col-xs-12 col-sm-3">
 							<div className="input-title">
-								<p className=""> Labor Type </p> 
+								<p className=""> Zip Code (First 3 Digits): </p> 
+							</div>
+							<div className="input-group input-group-lg">
+							  <input type="text" className="form-control" placeholder="" />
 							</div>
 						</div>
 						<div className="col-xs-12 col-sm-3">
 							<div className="input-title">
-								<p className=""> Labor Type </p> 
+								<p className=""> Squire Footage: </p> 
+							</div>
+							<div className="input-group input-group-lg">
+							  <input type="text" className="form-control" placeholder="" />
 							</div>
 						</div>
-						<div className="col-xs-12 col-sm-3">
-							<div className="input-title">
-								<p className=""> Labor Type </p> 
+						<div className="input-submit col-xs-12 col-sm-3">
+							<div className="btn-group btn-group-justified" role="group" aria-label="...">
+  							<div className="btn-group" role="group">
+									<button type="button" className="btn btn-primary btn-lg"> Calculate </button>
+								</div> 
+							</div>
+							<div className="input-text">
+								<p> Location: National Avarage </p>
 							</div>
 						</div>
 					</div>
