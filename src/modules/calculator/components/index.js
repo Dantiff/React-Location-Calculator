@@ -112,10 +112,27 @@ class LocationCalculator extends Component{
 								<div className="data-title">
 									Screws
 								</div>
-							  <div className="card-body">
-							    <h5 className="card-title">Card title</h5>
-							    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-							    <a href="#" className="btn btn-primary">Go somewhere</a>
+							  <div className="data-table">
+						      <Table>
+						      	<div className="row-title-one"> MyTitle2 </div>
+						      	<div className="row-title-two"> MyTitle </div>
+						        <thead>
+						          <tr>
+						            <th>Last Name</th>
+						            <th>Username</th>
+						          </tr>
+						        </thead>
+						        <tbody>
+						          <tr>
+						            <td>Thornton</td>
+						            <td>@fat</td>
+						          </tr>
+						          <tr>
+						            <td>Thornton</td>
+						            <td>@fat</td>
+						          </tr>
+						        </tbody>
+						      </Table>
 							  </div>
 								<div className="data-footer">
 									<p className="grid-detail ma-0">
