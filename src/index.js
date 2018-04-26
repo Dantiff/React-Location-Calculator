@@ -7,7 +7,7 @@ import { Router } from 'react-router';
 import routes from './routes';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
-import './app.styl';
+import './app.css';
 
 render(
   <Provider store={store}>

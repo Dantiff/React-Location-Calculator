@@ -54,38 +54,6 @@ class LocationCalculator extends Component{
 					<div className="column-title-box">
 						<p className="column-title"> User Management </p> 
 					</div>
-					<div className="col-xs-12"> 
-							<div className="col-sm-7 col-md-7 float-left users-count-tab"> 
-								<p className="users-count"> Users | { usersList.length } users </p>
-							</div>
-							<div className="col-sm-5 col-md-5 float-right">
-								<div className="col-sm-5 col-sm-offset-2 col-md-5 col-md-offset-2"> 
-									<span className="search-users"> 
-										<ValidatorForm
-											ref="form"
-											onSubmit={() => console.log(this.state.filterBy)}
-											onError={errors => console.log(errors)}
-										>
-											<TextValidator
-												floatingLabelText="Search..."
-												name="filterBy"
-												value={this.state.filterBy}
-												onChange={this.handleSearch.bind(this)}
-												className="search-input-field"
-											/>
-										</ValidatorForm>
-									</span>
-								</div>
-								<div className="col-sm-5 col-md-5 add-users float-right">
-									<FlatButton
-                    label="Add User"
-                    labelStyle={{textTransform: 'capitalize', color: '#337ab7'}}
-                    onTouchTap={ () => console.log('Begin adding a new user') }
-                    className="float-right"
-                  />
-								</div>
-							</div>
-					</div>
 					<div className='col-xs-12'>
 						<Table striped id="">
 							<thead>

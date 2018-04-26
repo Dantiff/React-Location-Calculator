@@ -12,9 +12,10 @@
   "dependencies": {
     "babel-polyfill": "^6.22.0",
     "chokidar": "^1.7.0",
-    "create-react-app-stylus": "^1.1.1",
     "material-ui": "^0.18.3",
     "moment": "^2.18.1",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
     "react": "^15.5.4",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.5.4",
@@ -34,8 +35,12 @@
     "string": "^3.3.3"
   },
   "scripts": {
-    "start": "react-scripts-with-stylus start src/app.styl",
-    "build": "react-scripts-with-stylus build src/app.styl",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-scripts build",
+    "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
