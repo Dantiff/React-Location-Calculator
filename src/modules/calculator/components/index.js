@@ -67,7 +67,7 @@ class LocationCalculator extends Component{
 						</div>
 						<div className="col-xs-12 col-sm-3">
 							<div className="input-title">
-								<p className=""> Squire Footage: </p> 
+								<p className=""> Square Footage: </p> 
 							</div>
 							<div className="input-group input-group-lg">
 							  <input type="text" className="form-control" placeholder="" />
@@ -109,12 +109,27 @@ class LocationCalculator extends Component{
 						</div>
 						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
 							<div className="grid-data-box">
-							  <img className="card-img-top" src="..." alt="Card image cap" />
+								<div className="data-title">
+									Screws
+								</div>
 							  <div className="card-body">
 							    <h5 className="card-title">Card title</h5>
 							    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 							    <a href="#" className="btn btn-primary">Go somewhere</a>
-							  </div> 
+							  </div>
+								<div className="data-footer">
+									<p className="grid-detail ma-0">
+										Overall labour savings (% / cost)
+									</p>
+									<div className="d-flex">
+										<div className="grid-savings">
+											<p className="amount"> 84.6% </p> 
+										</div>
+										<div className="grid-savings"> 
+											<p className="amount"> 25.5% </p> 
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div className="col-xs-12 col-sm-6 pa-0 grid-data">
