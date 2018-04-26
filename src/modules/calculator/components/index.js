@@ -55,6 +55,7 @@ class LocationCalculator extends Component{
 							<div className="input-title">
 								<p className=""> Labor Type </p> 
 							</div>
+							<input type="checkbox" checked data-toggle="toggle" data-on="Union" data-off="Non-Union" data-style="ios"/>
 						</div>
 						<div className="col-xs-12 col-sm-3">
 							<div className="input-title">
