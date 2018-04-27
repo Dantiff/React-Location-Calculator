@@ -28,7 +28,6 @@ class LocationCalculator extends Component{
 	  }
   }
   handleCalculate() {
-  	console.log('The submit data', { ...this.state, union: this.refs.unionCheck.checked });
   	this.props.cActions.calculateLocation({ ...this.state, union: this.refs.unionCheck.checked });
   }
   getGridDataBox(data, index) {
@@ -161,7 +160,6 @@ class LocationCalculator extends Component{
 
 	render(){
 		const { locationData } = this.props;
-		console.log('this is the retun Component data', locationData);
 
 		return(
 			<div className="calculator-index">

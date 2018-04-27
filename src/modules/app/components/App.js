@@ -18,8 +18,6 @@ class App extends Component {
                     </div>;
     }
 
-    console.log('The loader', calculatorLoader);
-
     const styles={
       width: '100%',
       background: '#eceeee',
