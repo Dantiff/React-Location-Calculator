@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as cActions from '../actions';
-import FlatButton from 'material-ui/FlatButton';
 import { Table } from 'reactstrap';
-import { ValidatorForm, TextValidator} from 'react-material-ui-form-validator';
 
 
 class LocationCalculator extends Component{
