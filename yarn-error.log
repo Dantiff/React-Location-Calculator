@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js run watch-css
+  /usr/bin/node /usr/share/yarn/bin/yarn.js start
 
 PATH: 
-  /home/dantiff/myprojects/location-calculator/node_modules/.bin:/home/dantiff/.config/yarn/link/node_modules/.bin:/home/dantiff/myprojects/location-calculator/node_modules/.bin:/home/dantiff/.config/yarn/link/node_modules/.bin:/home/dantiff/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/dantiff/bin:/home/dantiff/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/dantiff/bin:/home/dantiff/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.5.1
@@ -18,7 +18,7 @@ npm manifest:
     "name": "client",
     "version": "0.1.0",
     "private": true,
-    "proxy": "https://technekes.mockable.io/",
+    // "proxy": "https://technekes.mockable.io/",
     "homepage": "https://technekes.mockable.io/",
     "devDependencies": {
       "react-router": "^3.0.2",
@@ -36,7 +36,6 @@ npm manifest:
       "react-bootstrap": "^0.30.7",
       "react-dom": "^15.5.4",
       "react-fontawesome": "^1.6.1",
-      "react-material-ui-form-validator": "^1.1.0",
       "react-redux": "^5.0.2",
       "react-redux-toastr": "^6.2.7",
       "react-router": "^3.0.2",
@@ -7748,16 +7747,10 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: Command failed.
-  Exit signal: SIGTERM
-  Command: sh
-  Arguments: -c npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive
-  Directory: /home/dantiff/myprojects/location-calculator
-  Output:
-  
-      at ProcessTermError.MessageError (/usr/share/yarn/lib/cli.js:186:110)
-      at new ProcessTermError (/usr/share/yarn/lib/cli.js:226:113)
-      at ChildProcess.<anonymous> (/usr/share/yarn/lib/cli.js:30281:17)
-      at ChildProcess.emit (events.js:160:13)
-      at maybeClose (internal/child_process.js:943:16)
-      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
+  SyntaxError: /home/dantiff/myprojects/location-calculator/package.json: Unexpected token / in JSON at position 65
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1036:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:109:13
+      at <anonymous>

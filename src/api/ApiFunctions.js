@@ -1,6 +1,7 @@
 
 export function apiWrapper(method, url, params={}){
   let request = '';
+  const baseUrl = 'https://technekes.mockable.io/';
 
   let headers = {
     'Content-Type': 'application/json',
@@ -8,13 +9,13 @@ export function apiWrapper(method, url, params={}){
     'Authorization': '',
   }
   if(method === 'GET'){
-    request = new Request(url, {
+    request = new Request(baseUrl + url, {
       method: method,
       headers: headers
     });
   }
   else{
-    request = new Request(url, {
+    request = new Request(baseUrl + url, {
       method: method,
       headers: headers,
       body: JSON.stringify(params)
