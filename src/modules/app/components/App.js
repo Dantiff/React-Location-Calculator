@@ -10,16 +10,15 @@ class App extends Component {
   render() {
 
     const { calculatorLoader } = this.props;
-    let loader_div = null;
+    let appLoader = null;
 
     if(calculatorLoader){
-      loader_div = <span>
-                    <div className="load-container"> </div>
-                    <div className="loader"> 
-                      <CircularProgress size={60} thickness={5} color="#fff"/> 
-                    </div>
-                  </span>;
+      appLoader =  <div className="app-loader"> 
+                      <CircularProgress size={25} thickness={5} color="#fff"/> 
+                    </div>;
     }
+
+    console.log('The loader', calculatorLoader);
 
     const styles={
       width: '100%',
@@ -38,7 +37,7 @@ class App extends Component {
                 
                 {this.props.children}
 
-                { loader_div }
+                { appLoader }
                 <div className="clearfix"></div>
                 <Footer></Footer>
             </div>

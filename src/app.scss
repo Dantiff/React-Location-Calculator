@@ -23,4 +23,16 @@ body {
 			margin: 0 auto;
 		}
 	}
+	.app-loader {
+		position: absolute;
+		z-index: 1000;
+		top: 15vh;
+		right: 5vw;
+		min-width: 15vw;
+    background-color: #337ab7b3;
+    height: 50px;
+    padding: 12px 30px;
+    border-radius: 15px;
+    text-align: center;
+	}
 }

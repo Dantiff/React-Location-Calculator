@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js start-js
+  /usr/bin/node /usr/share/yarn/bin/yarn.js run watch-css
 
 PATH: 
-  /home/dantiff/bin:/home/dantiff/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+  /home/dantiff/myprojects/location-calculator/node_modules/.bin:/home/dantiff/.config/yarn/link/node_modules/.bin:/home/dantiff/myprojects/location-calculator/node_modules/.bin:/home/dantiff/.config/yarn/link/node_modules/.bin:/home/dantiff/.yarn/bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/home/dantiff/bin:/home/dantiff/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 Yarn version: 
   1.5.1
@@ -7749,9 +7749,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit signal: SIGTERM
   Command: sh
-  Arguments: -c react-scripts start
+  Arguments: -c npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive
   Directory: /home/dantiff/myprojects/location-calculator
   Output:
   
